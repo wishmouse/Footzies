@@ -1,0 +1,30 @@
+{
+  "name": "footzies",
+  "version": "1.0.0",
+  "description": "Photosharing App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "watch": "watchify client/app.js -o public/bundle.js -dv"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wishmouse/Footzies.git"
+  },
+  "author": "Wishmouse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wishmouse/Footzies/issues"
+  },
+  "homepage": "https://github.com/wishmouse/Footzies#readme",
+  "dependencies": {
+    "browserify": "^14.3.0",
+    "consolidate": "^0.14.5",
+    "jquery": "^3.2.1",
+    "nodemon": "^1.11.0",
+    "swig": "^1.4.2",
+    "watchify": "^3.9.0"
+  }
+}
