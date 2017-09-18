@@ -1,12 +1,8 @@
 var express = require('express')
 var path = require('path')
-var cookieParser = require('cookie-parser')
-var bodyParser = require('body-parser')
+
 var app = express()
-var cheerio = require('cheerio')
 var server = require('http').createServer(app) // create the server
-var mongodb = require('mongodb')
-var fs = require('fs');
 
 var port = process.env.PORT || 3030
 
@@ -16,6 +12,8 @@ var cons = require('consolidate')
 app.engine('html', cons.swig)
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'html')
+
+app.use(express.static(path.join(__dirname, 'public')))
 
 
 app.get('/', function(req, res){
